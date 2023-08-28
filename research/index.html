@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="apple-touch-icon" sizes="76x76" href="/img/shilab-icon.png">
+        <link rel="icon" href="/img/shilab-icon.png">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="theme-color" content="#2f4154">
+        <meta name="author" content="Victor Scott">
+        <meta name="keywords" content="Neuroscience">
+
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="ShiLab">
+        <meta property="og:url" content="http://example.com/index.html">
+        <meta property="og:site_name" content="ShiLab">
+        <meta property="og:locale" content="en_US">
+        <meta property="article:author" content="Victor Scott">
+        <meta property="article:tag" content="Neuroscience">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link
+            href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link
+            href="http://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/css/htmleaf-demo.css">
+
+        <title>ShiLab</title>
+
+        <link rel="stylesheet"
+            href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+        <!-- 主题依赖的图标库，不要自行修改 -->
+        <!-- Do not modify the link that theme dependent icons -->
+
+        <link rel="stylesheet"
+            href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+        <link rel="stylesheet"
+            href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+        <link rel="stylesheet" href="/css/main.css" />
+
+        <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+
+        <link id="highlight-css-dark" rel="stylesheet"
+            href="/css/highlight-dark.css" />
+
+        <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+        <script src="/js/utils.js"></script>
+        <script src="/js/color-schema.js"></script>
+        <script src="/js/jquery-1.11.0.min.js"></script>
+        <meta name="generator" content="Hexo 6.3.0"></head>
+    <style type="text/css" id="vic-man">
+            .paper-pic{
+                width: 30%;
+                margin: 1%;
+                padding: 1%;
+                height: 40vh;
+                float: left;
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            .paper-pic img{
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+                display: flex;
+                align-items: stretch;
+            }
+        </style>
+
+    <body>
+
+        <header>
+
+            <div class="header-inner" style="height: 15vh;">
+                <nav id="navbar"
+                    class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+                    <div class="container">
+                        <a class="navbar-brand" href="/">
+                            <strong>YC. Shi</strong>
+                        </a>
+
+                        <button id="navbar-toggler-btn" class="navbar-toggler"
+                            type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="animated-icon"><span></span><span></span><span></span></div>
+                        </button>
+
+                        <!-- Collapsible content -->
+                        <div class="collapse navbar-collapse"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto text-center">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/" target="_self">
+                                        <i class="iconfont icon-home-fill"></i>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/archives/"
+                                        target="_self">
+                                        <i class="iconfont icon-archive-fill"></i>
+                                        <span>Archive</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/research/"
+                                        target="_self">
+                                        <i class="iconfont icon-category-fill"></i>
+                                        <span>Research</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/team/"
+                                        target="_self">
+                                        <i class="iconfont icon-tags-fill"></i>
+                                        <span>Team</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/contact/"
+                                        target="_self">
+                                        <i class="iconfont icon-user-fill"></i>
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item" id="search-btn">
+                                    <a class="nav-link" target="_self"
+                                        href="javascript:;" data-toggle="modal"
+                                        data-target="#modalSearch"
+                                        aria-label="Search">
+                                        <i class="iconfont icon-search"></i>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item" id="color-toggle-btn">
+                                    <a class="nav-link" target="_self"
+                                        href="javascript:;"
+                                        aria-label="Color Toggle">
+                                        <i class="iconfont icon-dark"
+                                            id="color-toggle-icon"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="banner" class="banner" parallax=true
+                    style="background: url('/img/shilab-home.png') no-repeat center center; background-size: cover;">
+                    <div class="full-bg-img">
+                        <div class="mask flex-center"
+                            style="background-color: rgba(0, 0, 0, 0.3)">
+                            <div class="banner-text text-center fade-in-up">
+                                <div class="h2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <div id="outerdiv"
+            style="position:fixed;top:0;left:0;background:rgba(0,0,0,0.7);z-index:2;width:100%;height:100%;display:none;">
+            <div id="innerdiv" style="position:absolute;"><img id="bigimg"
+                    style="border:5px solid #fff;" src /></div>
+        </div>
+
+        <main>
+            <div class="row" style="width: 100%;">
+                <div class="col-md-offset-3 col-md-6" style="width: 100%;">
+                    <div class="tab" role="tabpanel" style="text-align: center;">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist"
+                            style="display: inline-block;">
+                            <li role="presentation" class="active"><a
+                                    href="#Section1" aria-controls="home"
+                                    role="tab" data-toggle="tab"><span><i
+                                            class="fa fa-globe"></i></span>Brain-like
+                                    Organoid</a></li>
+                            <li role="presentation"><a href="#Section2"
+                                    aria-controls="profile" role="tab"
+                                    data-toggle="tab"><span><i
+                                            class="fa fa-rocket"></i></span>Development
+                                    of interneuron</a></li>
+                            <li role="presentation"><a href="#Section3"
+                                    aria-controls="messages" role="tab"
+                                    data-toggle="tab"><span><i
+                                            class="fa fa-briefcase"></i></span>
+                                    Development of spinal cord</a></li>
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content tabs">
+                            <div role="tabpanel" class="tab-pane fade in active"
+                                id="Section1" style="text-align: left;">
+                                <h3>Brain-like Organoid</h3>
+                                <p>In contrast to the rodent lissencephalic
+                                    cortex, the human neocortex has evolved into
+                                    a highly folded gyrencephalic cortex with
+                                    enormous expansion of the cortical surface
+                                    and increases in cell type and number.
+                                    Animal models, particularly rodents, have
+                                    provided significant insight into brain
+                                    development, but the complexity of the human
+                                    neocortex cannot be fully captured with
+                                    these models. Therefore, understanding the
+                                    genetic changes as well as the mechanistic
+                                    steps that underpin the evolutionary changes
+                                    that occur during the development of the
+                                    neocortex in primates may require new model
+                                    systems.</p>
+                                <p>
+                                    Previous studies have successfully
+                                    established suitable approaches for
+                                    generating cerebral organoids from human
+                                    embryonic stem cells (hESCs) or hiPSCs that
+                                    can recapitulate in vivo human cortical
+                                    development and a well-polarized ventricle
+                                    neuroepithelial structure that consists of
+                                    ventricular radial glia (vRGs), outer radial
+                                    glia (oRGs), and intermediate progenitor
+                                    cells (IPCs) and the production of mature
+                                    neurons within layers.
+                                    However, a major limitation of current
+                                    culture approaches that prevents truly in
+                                    vivo–like functionality is the lack of a
+                                    microenvironment, such as vascular
+                                    circulation. Previous studies have reported
+                                    that the development of the nervous system
+                                    and the vascular system in the brain is
+                                    synchronous.
+                                </p>
+                                <div
+                                    style="margin: auto;width: 100%;position: relative;height: 40vh;">
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-organoid-pic1.jpg" />
+                                    </div>
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-organoid-pic2.jpg" />
+                                    </div>
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-organoid-pic3.jpg" />
+                                    </div>
+                                </div>
+                                <p style="margin-top: 3vh;">
+                                    We demonstrated a novel paradigm for the
+                                    generation of vascularized organoids
+                                    (vOrganoids) consisting of typical human
+                                    cortical cell types and a vascular structure
+                                    for over 200 days as a vascularized and
+                                    functional brain organoid model. The
+                                    observation of spontaneous excitatory
+                                    postsynaptic currents (sEPSCs), spontaneous
+                                    inhibitory postsynaptic currents (sIPSCs),
+                                    and bidirectional electrical transmission
+                                    indicated the presence of chemical and
+                                    electrical synapses in vOrganoids. More
+                                    importantly, single-cell RNA-sequencing
+                                    analysis illustrated that vOrganoids
+                                    exhibited robust neurogenesis and that cells
+                                    of vOrganoids differentially expressed genes
+                                    (DEGs) related to blood vessel
+                                    morphogenesis. The transplantation of
+                                    vOrganoids into the mouse S1 cortex resulted
+                                    in the construction of functional
+                                    human-mouse blood vessels in the grafts that
+                                    promoted cell survival in the grafts. This
+                                    vOrganoid culture method could not only
+                                    serve as a model to study human cortical
+                                    development and explore brain disease
+                                    pathology but also provide potential
+                                    prospects for new cell therapies for nervous
+                                    system disorders and injury.
+                                </p>
+                                <p>
+                                    <h3>Reference</h3>
+                                </p>
+                                <p>
+                                    1. <a
+                                        href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000705">
+                                        <strong>Yingchao Shi*</strong> , Le
+                                        Sun*, Mengdi Wang*,
+                                        Jianwei Liu*, Suijuan Zhong, Rui Li,
+                                        Peng Li, Lijie Guo, Ai Fang, Ruiguo
+                                        Chen, Woo-Ping Ge, Qian Wu, Xiaoqun
+                                        Wang. Vascularized human cortical
+                                        organoids (vOrganoid) model cortical
+                                        development in vivo. <i>PLOS Biology</i>,
+                                        2020,
+                                        18: e3000705.
+                                    </a>
+                                </p>
+                                <p>
+                                    2. <a
+                                        href="https://www.sciencedirect.com/science/article/abs/pii/S0959438820301331">
+                                        <strong>Yingchao Shi</strong>, Qian Wu,
+                                        Xiaoqun Wang.
+                                        Modeling brain development and diseases
+                                        with human cerebral organoids. Current
+                                        Opinion in Neurobiology, 2020, 66:
+                                        103-115.
+                                    </a>
+                                </p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade"
+                                id="Section2" style="text-align: left;">
+                                <h3> Development of interneuron</h3>
+                                <p>
+                                    The cerebral cortex contains two main
+                                    classes of neurons that derive from distinct
+                                    structures in the developing telencephalon.
+                                    Excitatory neurons originate from progenitor
+                                    cells in the developing pallium, whereas
+                                    γ-aminobutyric acid–expressing (GABAergic)
+                                    interneurons derive from the ganglionic
+                                    eminences, the transitory structures of the
+                                    fetal brain that also give rise to the basal
+                                    ganglia. The general organization and
+                                    cellular architecture of the telencephalon
+                                    are conserved among mammals, but its size
+                                    and complexity vary enormously between
+                                    rodents and humans. The extent to which
+                                    differences in early regulatory mechanisms
+                                    governing the development of the
+                                    telencephalon shape fundamental differences
+                                    in this brain structure in rodents and
+                                    humans remains elusive.
+                                </p>
+                                <p>As transient structures in early brain
+                                    development, the ganglionic eminences
+                                    generate dozens of different types of
+                                    interneurons that go on to migrate
+                                    throughout and weave together the developing
+                                    brain. Shi et al. analyzed human fetal
+                                    ganglionic eminences. Single-cell
+                                    transcriptomics revealed unexpected
+                                    diversity in the types of progenitor cells
+                                    involved. The human ganglionic eminence
+                                    depends more heavily on intermediate
+                                    progenitor cells as workhorses than does the
+                                    developing neocortex, with its greater
+                                    reliance on radial glial cells. </p>
+                                <div
+                                    style="margin: auto;width: 100%;position: relative;height: 40vh;">
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-interneuron-pic1.jpg" />
+                                    </div>
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-interneuron-pic2.jpg" />
+                                    </div>
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-interneuron-pic3.jpg" />
+                                    </div>
+                                </div>
+                                <p style="margin-top: 3vh;">
+                                    We used single-cell RNA sequencing to
+                                    characterize the emergence of cell diversity
+                                    in the human ganglionic eminences, the
+                                    transitory structures of the human fetal
+                                    brain where striatal and cortical GABAergic
+                                    neurons are generated. We identified
+                                    regional and temporal diversity among
+                                    progenitor cells underlying the generation
+                                    of a variety of projection neurons and
+                                    interneurons. We found that these cells are
+                                    specified within the human ganglionic
+                                    eminences by transcriptional programs
+                                    similar to those previously identified in
+                                    rodents. Our findings reveal an
+                                    evolutionarily conserved regulatory logic
+                                    controlling the specification, migration,
+                                    and differentiation of GABAergic neurons in
+                                    the human telencephalon.
+                                </p>
+                                <p>
+                                    <h3>Reference</h3>
+                                </p>
+                                <p>
+                                    1. <a
+                                        href="https://www.science.org/doi/10.1126/science.abj6641">
+                                        <strong>Yingchao Shi*</strong>, Mengdi
+                                        Wang*, Da Mi*, Tian Lu, Bosong Wang, Hao
+                                        Dong, Suijuan Zhong, Youqiao Chen, Le
+                                        Sun, Xin Zhou, Qiang Ma, Zeyuan Liu, Wei
+                                        Wang, Junjing Zhang, Qian Wu, Oscar
+                                        Marín, Xiaoqun Wang. Mouse and human
+                                        share conserved transcriptional programs
+                                        for interneuron development. <i>Science</i>,
+                                        2021, 374: eabj6641.
+                                    </a>
+                                </p>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade"
+                                id="Section3" style="text-align: left;">
+                                <h3>Development of spinal cord</h3>
+                                <p>The spinal cord plays a central role in
+                                    integrating sensory and motor information to
+                                    regulate movement. This is achieved by the
+                                    coordinated function of motor neurons (MNs)
+                                    and other neuronal and glial populations
+                                    that are arranged in spatially distinct
+                                    domains. Damage or degeneration of the
+                                    spinal cord can lead to devastating
+                                    disorders, such as amyotrophic lateral
+                                    sclerosis (ALS) or developmental disorders,
+                                    such as spinal muscular atrophy or childhood
+                                    leukodystrophies</p>
+                                <p>
+                                    While cell diversity of the developing human
+                                    neural tube and that of the mouse spinal
+                                    cord has started to be unveiled, a
+                                    comprehensive profiling of the developing
+                                    human spinal cord at midgestation is needed.
+                                    Access to data from human fetal samples is
+                                    important as increasing evidence points at
+                                    human-specific timing and characteristics in
+                                    nervous system assembly. For example,
+                                    development of the cerebral cortex in humans
+                                    takes place at a slower rate compared with
+                                    rodents and other primates. On the other
+                                    hand, the human spinal cord has been
+                                    proposed to develop and mature faster
+                                    compared with rodents.
+                                </p>
+                                <div
+                                    style="margin: auto;width: 100%;position: relative;height: 40vh;">
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-spinal-pic1.jpg" />
+                                    </div>
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-spinal-pic2.jpg" />
+                                    </div>
+                                    <div class="paper-pic">
+                                        <img
+                                            src="/img/research-spinal-pic3.jpg" />
+                                    </div>
+                                </div>
+                                <p style="margin-top: 3vh;">
+                                    We ...
+                                </p>
+                                <p>
+                                    <h3>Reference</h3>
+                                </p>
+                                <p>
+                                    1. <a
+                                        href>
+                                        <strong>Yingchao Shi*</strong>.
+                                        Unpublished. <i>?</i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <!-- Scripts -->
+
+        <script src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js"></script>
+        <link rel="stylesheet"
+            href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+        <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+        <script type="text/javascript">
+    $(function(){
+        $("img").click(function(){
+            var _this = $(this);
+            imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);
+        });
+    });
+</script>
+        <script type="text/javascript">
+    function imgShow(outerdiv, innerdiv, bigimg, _this){
+    var src = _this.attr("src");//获取当前点击的pimg元素中的src属性
+    $(bigimg).attr("src", src);//设置#bigimg元素的src属性
+        /*获取当前点击图片的真实大小，并显示弹出层及大图*/
+    $("<img />").attr("src", src).load(function(){
+        var windowW = $(window).width();//获取当前窗口宽度
+        var windowH = $(window).height();//获取当前窗口高度
+        var realWidth = this.width;//获取图片真实宽度
+        var realHeight = this.height;//获取图片真实高度
+        var imgWidth, imgHeight;
+        var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放
+        if(realHeight>windowH*scale) {//判断图片高度
+            imgHeight = windowH*scale;//如大于窗口高度，图片高度进行缩放
+            imgWidth = imgHeight/realHeight*realWidth;//等比例缩放宽度
+            if(imgWidth>windowW*scale) {//如宽度扔大于窗口宽度
+                imgWidth = windowW*scale;//再对宽度进行缩放
+            }
+        } else if(realWidth>windowW*scale) {//如图片高度合适，判断图片宽度
+            imgWidth = windowW*scale;//如大于窗口宽度，图片宽度进行缩放
+            imgHeight = imgWidth/realWidth*realHeight;//等比例缩放高度
+        } else {//如果图片真实高度和宽度都符合要求，高宽不变
+            imgWidth = realWidth;
+            imgHeight = realHeight;
+        }
+        $(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放
+        var w = (windowW-imgWidth)/2;//计算图片与窗口左边距
+        var h = (windowH-imgHeight)/2;//计算图片与窗口上边距
+        $(innerdiv).css({"top":h, "left":w});//设置#innerdiv的top和left属性
+        $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg
+    });
+    $(outerdiv).click(function(){//再次点击淡出消失弹出层
+        $(this).fadeOut("fast");
+    });
+}
+</script>
+
+        <script src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js"></script>
+        <script
+            src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
+        <script src="/js/events.js"></script>
+        <script src="/js/plugins.js"></script>
+        <script src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js"></script>
+        <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+        <script src="http://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"
+            type="text/javascript"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/js/img-lazyload.js"></script>
+        <script src="/js/local-search.js"></script>
+
+        <!-- 主题的启动项，将它保持在最底部 -->
+        <!-- the boot of the theme, keep it at the bottom -->
+        <script src="/js/boot.js"></script>
+
+        <noscript>
+            <div class="noscript-warning">Blog works best with JavaScript
+                enabled</div>
+        </noscript>
+    </body>
+</html>
